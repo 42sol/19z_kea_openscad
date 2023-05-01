@@ -1,0 +1,12 @@
++openscad: +library @code: (C) modify library folder location
+ 
++openscad: +message @create: (A) fetch library from old laptop
++openscad: +polyround @learn: (B) learn by example - cable clip 
++openscad: +polyroound @learn: (B) write cheat sheet
+
++openscad: +constructive @learn: (A) learn by example - add and delete
++openscad: +constructive @learn: (B) tutorial_1
++openscad: +constructive @learn: (B) tutorial_2
++openscad: +constructive @learn: (B) tutorial_3
++openscad: +constructive @learn: (B) bending 
++openscad: +constructive @learn: (B) write cheat sheet
