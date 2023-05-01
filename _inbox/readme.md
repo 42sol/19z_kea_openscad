@@ -1,3 +1,6 @@
+---
+info: best displayed with obsidian.md
+---
 # Readme: _inbox
 
 The inbox folder is sused for adding other stuff, that I want to pick and choose from.
