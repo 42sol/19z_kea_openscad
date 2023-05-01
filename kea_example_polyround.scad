@@ -2,17 +2,18 @@
 include <kea_polyround.scad>
 // original include <polyround.scad>
 
-basicPolyRoundExample();
-// polyLineExample();
-// parametricPolyRoundExample();
+// basicPolyRoundExample();
+//polyLineExample();
+//parametricPolyRoundExample();
 // experimentalParametricPolyRoundExample();
-// conflicResolutionExample();
-// translateRadiiPointsExample();
-// 2dShellExample();
-// beamChainExample();
-// mirrorPointsExample();
-// radiusExtrudeExample();
-// polyRoundExtrudeExample();
+// ^- generates to warning ... on line 1194 string - number and number / undefined
+//conflicResolutionExample();
+//translateRadiiPointsExample();
+//2dShellExample();
+//beamChainExample();
+//mirrorPointsExample();
+//radiusExtrudeExample();
+//polyRoundExtrudeExample();
 
 
 // testing 
@@ -22,6 +23,7 @@ module basicPolyRoundExample(){
   // polyLine is a dev helper. Aim is to show the points of the polygon and their order before
   // you're ready to move on to polyRound and a polygon
   radiiPoints=[[-4,0,1],[5,3,1.5],[0,7,0.1],[8,7,10],[20,20,0.8],[10,0,10]];
+
   polygon(polyRound(radiiPoints,30));
   %translate([0,0,0.3])polygon(getpoints(radiiPoints));//transparent copy of the polgon without rounding
 }
