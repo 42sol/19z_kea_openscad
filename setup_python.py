@@ -4,17 +4,18 @@ from loguru import logger # https://github.com/Delgan/loguru#readme
 from pathlib import Path # 
 from shutil import copy2 as copy
 from rich import print as log 
+do_always_copy = True
+ 
+library_file_constructive = Path(".//_inbox//constructive//constructive-compiled.scad")
+library_file_polyround = Path(".//_inbox//Round-Anything//polyround.scad")
 
-library_file_constructive = Path(r".\_inbox\constructive\constructive-compiled.scad")
-library_file_polyround = Path(r".\_inbox\Round-Anything\polyround.scad")
-
-kea_places_constructive = Path('kea_constructive.sckea_copy(library_file_polyround, kea_places_polyround)ad')
+kea_places_constructive = Path('kea_constructive.scad')
 kea_places_polyround = Path('kea_polyround.scad')
 
 
 def kea_copy(from_file_path, to_file_path):
     if from_file_path.exists() and from_file_path.is_file():
-        if to_file_path.exists():
+        if not do_always_copy or to_file_path.exists():
             log(f'kea: already placed')
         else:
             log(f'kea: copy file {to_file_path}')
